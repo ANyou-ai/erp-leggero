@@ -4,8 +4,15 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#121212">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="ERP leggero">
   <title>ERP leggero</title>
-  <link rel="stylesheet" href="css/app.css?v=9">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" type="image/png" href="icon-192.png">
+  <link rel="apple-touch-icon" href="icon-180.png">
+  <link rel="stylesheet" href="css/app.css?v=10">
 </head>
 <body>
   <header class="testata">
@@ -25,11 +32,14 @@
       <p id="foglio-testo"></p>
     </div>
   </div>
-  <script src="js/format.js?v=9"></script>
-  <script src="js/engine.js?v=9"></script>
-  <script src="js/demo.js?v=9"></script>
-  <script src="js/azioni.js?v=9"></script>
-  <script src="js/db.js?v=9"></script>
-  <script src="js/ui.js?v=9"></script>
+  <script src="js/format.js?v=10"></script>
+  <script src="js/engine.js?v=10"></script>
+  <script src="js/demo.js?v=10"></script>
+  <script src="js/azioni.js?v=10"></script>
+  <script src="js/db.js?v=10"></script>
+  <script src="js/ui.js?v=10"></script>
+  <script>
+    if ("serviceWorker" in navigator) navigator.serviceWorker.register("sw.js");
+  </script>
 </body>
 </html>
